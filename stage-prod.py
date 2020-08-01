@@ -35,10 +35,10 @@ while 1:
     if buildNew != build:
         try:
             # Stage Variables
-            moduleName = stage['moduleName']
-            buildDate = stage['buildDate']
-            branch = stage['branch']
-            build = stage['build']
+            moduleName = res_stage_new['moduleName']
+            buildDate = res_stage_new['buildDate']
+            branch = res_stage_new['branch']
+            build = res_stage_new['build']
             print('El servidor de espera se ha actualizado... (FortniteStage)')
             api.update_with_media('assets/status.jpg', 'Se ha actualizado el servidor de espera. (FortniteStage)' + '\n\n' + moduleName + '\n' + branch + ' (' + build + ')' '\n\n' + '[' + buildDate + ']')
             print('Publicado correctamente en Twitter. (FortniteStage)')
@@ -54,10 +54,10 @@ while 1:
     if buildNew_live != build_live:
         try:
             # Live Variables
-            moduleName_live = live['moduleName']
-            buildDate_live = live['buildDate']
-            branch_live = live['branch']
-            build_live = live['build']
+            moduleName_live = res_live_new['moduleName']
+            buildDate_live = res_live_new['buildDate']
+            branch_live = res_live_new['branch']
+            build_live = res_live_new['build']
             print('El servidor de Fortnite se ha actualizado... (FortniteLive)')
             api.update_with_media('assets/status.jpg', 'Se ha actualizado el servidor de Fortnite. (FortniteLive)' + '\n\n' + moduleName_live + '\n' + branch_live + ' (' + build_live + ')' '\n\n' + '[' + buildDate + ']')
             print('Publicado correctamente en Twitter. (FortniteLive)')

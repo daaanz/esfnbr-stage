@@ -17,7 +17,7 @@ def download_img(url, file_name):
         im = Image.open(BytesIO(r.content))
         im.save('assets.png')
 
-url_stage = 'https://fortnite-public-service-stage.ol.epicgames.com/fortnite/api/version'
+url_stage = 'https://esfnbr.com/content/images/stage.json'
 response_stage = requests.get(url_stage).json()
 buildOld = response_stage['build']
 setDelay = 60

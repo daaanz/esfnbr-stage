@@ -33,6 +33,7 @@ while 1:
         file = ('assets.png')
         download_img(img_url, file)
         api.update_with_media('assets.png', 'Se ha actualizado el servidor de espera (FortniteStage)' + '\n\n' + branch + ' (' + buildNew + ')')
+        buildOld = stage_res_new['build']
     else:
         print('No change in Stage.')
     

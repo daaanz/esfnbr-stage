@@ -19,21 +19,22 @@ def download_img(url, file_name):
 
 url_stage = 'https://fortnite-public-service-stage.ol.epicgames.com/fortnite/api/version'
 response_stage = requests.get(url_stage).json()
-buildOld = response_stage['build']
+versionOld = response_stage['version']
 setDelay = 60
 
 while 1:
     stage_res_new = requests.get(url_stage).json()
+    versionNew = stage_res_new['version']
     buildNew = stage_res_new['build']
-    if buildNew != buildOld:
+    if versionNew != versionOld:
         print('Change in Stage.')
-        print(buildNew)
+        print(versionNew)
         branch = stage_res_new['branch']
         img_url = 'https://esfnbr.com/content/images/assets.png'
         file = ('assets.png')
         download_img(img_url, file)
-        api.update_with_media('assets.png', 'Se ha actualizado el servidor de espera (FortniteStage)' + '\n\n' + branch + ' (' + buildNew + ')')
-        buildOld = stage_res_new['build']
+        api.update_with_media('assets.png', 'Se ha añadido el Parche ' + versionNew + ' (' + buildNew + ')' + 'al servidor de espera (FortniteStage)' + '\n\n' + 'Debería lanzarse en los próximos días.')
+        versionOld = stage_res_new['version']
     else:
         print('No change in Stage.')
     

@@ -33,7 +33,7 @@ while 1:
         img_url = 'https://esfnbr.com/content/images/assets.png'
         file = ('assets.png')
         download_img(img_url, file)
-        api.update_with_media('assets.png', 'Se ha añadido el Parche ' + versionNew + ' (' + buildNew + ')' + 'al servidor de espera (FortniteStage)' + '\n\n' + 'Debería lanzarse en los próximos días.')
+        api.update_with_media('assets.png', 'Se ha añadido el Parche ' + versionNew + ' (' + buildNew + ') ' + 'al servidor de espera (FortniteStage)' + '\n\n' + 'Debería lanzarse en los próximos días.')
         versionOld = stage_res_new['version']
     else:
         print('No change in Stage.')
